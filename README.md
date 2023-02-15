@@ -1,13 +1,12 @@
-# diVibes
+# Predictive Maintainance Using Deep Learning
 
 ## Name
 
-Digital 3D Broadband Vibration Sensors for Improved Machine Monitoring
-using Machine Learning
+
 
 
 ## Description
-The short name of the project is diVibes. The repo is used to conduct a series of experiments on the time series data collected from the diVibes test setup. Each script takes different arguments. For now these scripts are not generic, as per the future requirements scripts will be modified and README is updated. For now, let's describe the usage of each script and their arguments.
+The repo is used to conduct a series of experiments on the time series data collected from the test setup. Each script takes different arguments. For now these scripts are not generic, as per the future requirements scripts will be modified and README is updated. For now, let's describe the usage of each script and their arguments.
 
 ## Usage
 
