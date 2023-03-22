@@ -14,25 +14,24 @@ import glob
 from tqdm import tqdm
 
 class diVibes:
-    def __init__(self, len_series=300001, N=100000, class_names=[]):
+
+    def __init__(self, len_series=300001, N=100000):
         self.len_series = len_series
-        self.class_names = class_names
         self.N = N
 
     def _data_standardization(self, timeseries):
         scaler = StandardScaler()
         return scaler.fit_transform(timeseries)
 
-
     def get_dataset_info(self, dataset_path):
-
+        # retuns the folder names found under the training dataset
+        class_names = []
         for folder in glob.glob(dataset_path + '/*'):
-            self.class_names.append(folder.split('/')[-1])
-            
-        return self.class_names
+            class_names.append(folder.split('/')[-1])
+        return class_names
 
 
-    def get_dataset(self, dataset_path):
+    def get_dataset(self, dataset_path, class_names):
         """
         Return a Standardized dataset.
         """
@@ -40,9 +39,9 @@ class diVibes:
         labels = []
 
         for folder in glob.glob(dataset_path + '/*'):
-            i = self.class_names.index(folder.split('/')[-1])
+            i = class_names.index(folder.split('/')[-1])
             j = 0
-            for file in glob.glob(folder + '/*.txt'):
+            for file in glob.glob(folder + '/*.txt')[0:100]:
                 timeseries = np.loadtxt(file, delimiter=';', dtype=float,
                                         skiprows=29, usecols=(1, 2, 3), encoding='latin2') 
                 
@@ -58,9 +57,6 @@ class diVibes:
                 dataset = np.vstack([dataset, timeseries[self.N + self.N: len(timeseries) - 1].reshape(1, self.N, 3)])
         
                 labels.extend([i, i, i])
-                
-                # labels.append(i)
-
                 j = j + 1
             print('Loaded ' + str(j) + ' measurements of class ' + folder.split('/')[-1])
 

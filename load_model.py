@@ -29,10 +29,7 @@ if __name__ == '__main__':
     output_dir = args.output_dir + '_model_prediction_results'
     Path(output_dir).mkdir(parents=True, exist_ok=True)
 
-    class_names = ['A1_1000', 'A1_1200', 'A1_600', 'A1_8000']
-
-
-    # class_names = ['A2', 'S1', 'A1', 'A1_A2']
+    # class_names = ['A1_1000', 'A1_1200', 'A1_600', 'A1_8000']
     # true_labels = ['S1', 'S1', 'S1',  
     #             'A1_A2', 'A1_A2', 'A1_A2',
     #             'A2', 'A2', 'A2', 
@@ -40,7 +37,6 @@ if __name__ == '__main__':
     #             'A1_A2', 'A1_A2', 'A1_A2',
     #             'A1', 'A1', 'A1',
     #             'S1', 'S1', 'S1']
-
     # true_labels = [1, 1, 1,
     #             3, 3, 3,
     #             0, 0, 0,
@@ -48,6 +44,16 @@ if __name__ == '__main__':
     #             3, 3, 3,
     #             2, 2, 2,
     #             1, 1, 1]
+    # true_labels = [1, 
+    #         3,
+    #         0,
+    #         3,
+    #         3,
+    #         2,
+    #         1]
+
+    class_names = ['S1', 'A1', 'A1_A2']
+    true_labels = [0, 2, 2, 2, 1, 0]
 
     # Blind-dataset was collected at 1200 rpm.
     # B00.txt is of Class: S1
@@ -58,18 +64,19 @@ if __name__ == '__main__':
     # B06.txt is of Class: A1_A2 -> A1
     # B07.txt is of Class: S1
 
-    true_labels = [1, 1, 1,
-                1, 1, 1,
-                1, 1, 1,
-                1, 1, 1,
-                1, 1, 1,
-                1, 1, 1,
-                1, 1, 1]
+    # true_labels = [1, 1, 1,
+    #             1, 1, 1,
+    #             1, 1, 1,
+    #             1, 1, 1,
+    #             1, 1, 1,
+    #             1, 1, 1,
+    #             1, 1, 1]
 
 
     dataset = np.array([])
-    for file in sorted(glob.glob(args.test_path + '/*.txt')):
 
+    for file in sorted(glob.glob(args.test_path + '/*.txt')):
+        
         print('Loaded measurements from the file ' + file.split('/')[-1])
       
         timeseries = np.loadtxt(file, delimiter=';', dtype=float,
@@ -80,24 +87,23 @@ if __name__ == '__main__':
 
         dataset = np.vstack([dataset, timeseries[0:tester.N].reshape(1, tester.N, 3)])\
             if dataset.size else timeseries[0:tester.N].reshape(1, tester.N, 3)
-    
-        dataset = np.vstack([dataset, timeseries[tester.N:tester.N + tester.N].reshape(1, tester.N, 3)])
-        
-        dataset = np.vstack([dataset, timeseries[tester.N + tester.N: len(timeseries) - 1].reshape(1, tester.N, 3)])
-
+        # dataset = np.vstack([dataset, timeseries[tester.N:tester.N + tester.N].reshape(1, tester.N, 3)])
+        # dataset = np.vstack([dataset, timeseries[tester.N + tester.N: len(timeseries) - 1].reshape(1, tester.N, 3)])
 
     test_pred = np.argmax(model.predict(dataset), axis=1)
-
-
     test_loss, test_acc = model.evaluate(dataset, np.array(true_labels))
-    print("Test accuracy", test_acc)
-    print("Test loss", test_loss)
-        
+    print('Test accuracy = {} and loss = {}'.format(test_acc, test_loss))
+    
     cm = confusion_matrix(np.array(true_labels), test_pred)
     disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=class_names)
     disp.plot(cmap=plt.cm.Blues)
     plt.savefig(os.path.join(output_dir, 'confusion_matrix.png'))
     plt.close()
+
+    for i, file in enumerate(sorted(glob.glob(args.test_path + '/*.txt'))):
+        print('The file ' + file.split('/')[-1] + ' of class {} -> but predicted as {}'.format(
+            class_names[true_labels[i]], class_names[test_pred[i]]))
+
 
         
 
