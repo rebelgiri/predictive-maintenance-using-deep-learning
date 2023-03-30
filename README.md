@@ -44,6 +44,12 @@ This script is used to load saved models for testing.
 
 ### Estimation of the Rotating Unbalance
 
+<p align="center">
+      <img src="https://github.com/rebelgiri/predictive-maintenance-using-deep-learning/blob/main/figures/trainingAndValidationLoss.png" align="left">
+      
+      <img src="https://github.com/rebelgiri/predictive-maintenance-using-deep-learning/blob/main/figures/trainingAndValidationAccuracy.png" align="right">
+</p>
+
 ![](https://github.com/rebelgiri/predictive-maintenance-using-deep-learning/blob/main/figures/trainingAndValidationLoss.png "Rotating Unbalance Classifier Loss during Training and Validation at each Epoch") ![](https://github.com/rebelgiri/predictive-maintenance-using-deep-learning/blob/main/figures/trainingAndValidationAccuracy.png "Rotating Unbalance Classifier Accuracy during Training and Validation at each Epoch")
 <p align="center">
       <em>Training and validation learning curves while training Rotating Unbalance
