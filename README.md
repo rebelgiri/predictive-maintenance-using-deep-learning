@@ -40,17 +40,23 @@ This script is used to load saved models for testing.
     2. --test_path: The path of the test dataset.
     3. --output_dir: The path of the output directory.
 
-## **Results**
+## **Experiments**
 
 ### Estimation of the Rotating Unbalance
 
 ![](https://github.com/rebelgiri/predictive-maintenance-using-deep-learning/blob/main/figures/trainingAndValidationLoss.png "Rotating Unbalance Classifier Loss during Training and Validation at each Epoch") ![](https://github.com/rebelgiri/predictive-maintenance-using-deep-learning/blob/main/figures/trainingAndValidationAccuracy.png "Rotating Unbalance Classifier Accuracy during Training and Validation at each Epoch")
-*Training and validation learning curves while training Rotating Unbalance
-Classifier.*
+<p align="center">
+      <em>Training and validation learning curves while training Rotating Unbalance
+Classifier.</em>
+</p>
 
 ### Estimation of the Speed
 
 ![](https://github.com/rebelgiri/predictive-maintenance-using-deep-learning/blob/main/figures/speedClassifierTrainingAndValidationLoss.png "Speed Classifier Loss during Training and Validation at each Epoch") ![](https://github.com/rebelgiri/predictive-maintenance-using-deep-learning/blob/main/figures/speedClassifierTrainingAndValidationAccuracy.png "Speed Classifier Accuracy during Training and Validation at each Epoch")
-*Training and validation learning curves while training Speed
-Classifier.*
+
+
+<p align="center">
+      <em>Training and validation learning curves while training Speed
+Classifier.</em>
+</p>
 
