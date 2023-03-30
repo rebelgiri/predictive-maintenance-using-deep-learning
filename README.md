@@ -72,7 +72,7 @@ Classifier.</em>
 
 
 <p align="center">
-    <img src="https://github.com/rebelgiri/predictive-maintenance-using-deep-learning/blob/main/figures/confusionMatrix.png" align="center" width="49%">
+    <img src="https://github.com/rebelgiri/predictive-maintenance-using-deep-learning/blob/main/figures/confusionMatrix.png" align="center" width="60%">
 </p>
 
 
@@ -88,8 +88,8 @@ dataset using a confusion matrix.</em>
 
 
 <p align="center">
-      <img src="https://github.com/rebelgiri/predictive-maintenance-using-deep-learning/blob/main/figures/speedClassifierTrainingAndValidationLoss.png" align="center" width="30%">
-      <img src="https://github.com/rebelgiri/predictive-maintenance-using-deep-learning/blob/main/figures/speedClassifierTrainingAndValidationAccuracy.png" align="center" width="30%">
+      <img src="https://github.com/rebelgiri/predictive-maintenance-using-deep-learning/blob/main/figures/speedClassifierTrainingAndValidationLoss.png" align="center" width="49%">
+      <img src="https://github.com/rebelgiri/predictive-maintenance-using-deep-learning/blob/main/figures/speedClassifierTrainingAndValidationAccuracy.png" align="center" width="49%">
 </p>
 
 <p align="center">
@@ -100,7 +100,7 @@ Classifier.</em>
 
 
 <p align="center">
-    <img src="https://github.com/rebelgiri/predictive-maintenance-using-deep-learning/blob/main/figures/speedClassifierConfusionMatrix.png" align="center" width="49%">
+    <img src="https://github.com/rebelgiri/predictive-maintenance-using-deep-learning/blob/main/figures/speedClassifierConfusionMatrix.png" align="center" width="60%">
 </p>
 
 
