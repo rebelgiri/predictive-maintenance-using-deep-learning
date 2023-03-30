@@ -41,7 +41,7 @@ class diVibes:
         for folder in glob.glob(dataset_path + '/*'):
             i = class_names.index(folder.split('/')[-1])
             j = 0
-            for file in glob.glob(folder + '/*.txt')[0:100]:
+            for file in glob.glob(folder + '/*.txt')[0:150]:
                 timeseries = np.loadtxt(file, delimiter=';', dtype=float,
                                         skiprows=29, usecols=(1, 2, 3), encoding='latin2') 
                 

@@ -13,14 +13,14 @@ The short name of the project is diVibes. The repo is used to conduct a series o
 
 Below arguements are passed while running scripts.
 ### main.py 
+
+This script is used to start training the model.
+
     1. --model_name: The name of the model.
     2. --data_dir: The path of the training and testing dataset.
     3. --output_dir: The path of the output directory.
     4. --N: The length of the time series slice. we use N to slice the complete time series data and stack them above each other.For example, the time series is of length 1000, and if N is 300, then three sliced time series data of length 300 are stacked one after the other with the same label.
-    5. --use_saved_data: Set to 1 if you want to load the saved training and test dataset in the numpy file. The dataset can be saved using the script save_dataset.py, otherwise 0.
-    6. --ignore_dir: The list of folders to exclude from training and test dataset.
 
-    Example:
 ### save_dataset.py 
 
 This script is used to save datasets in numpy files.

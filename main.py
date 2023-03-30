@@ -124,8 +124,6 @@ if __name__ == "__main__":
     test_labels = np.array(test_labels)
     print('Size of test dataset labels {}'.format(test_labels.shape))
 
-
-
     # train_ds = tf.data.Dataset.from_tensor_slices((training_dataset, training_labels))
     # test_ds = tf.data.Dataset.from_tensor_slices((test_dataset, test_labels))
 
@@ -137,9 +135,9 @@ if __name__ == "__main__":
         c_x_train = training_dataset[training_labels == c]
         c_x_train = c_x_train.reshape(
             training_dataset[training_labels == c].shape[0], 3, training_dataset.shape[1])
-        plt.plot(c_x_train[0][0][0:500], label="class " + str(c))
+        plt.plot(c_x_train[0][2][0:500], label="class " + str(c))
     plt.legend(loc="best")
-    plt.savefig(os.path.join(output_dir, '500_x-direction_samples.png'))
+    plt.savefig(os.path.join(output_dir, '500_z-direction_samples.png'))
     plt.close()
 
     plt.figure()
@@ -147,9 +145,9 @@ if __name__ == "__main__":
         c_x_train = training_dataset[training_labels == c]
         c_x_train = c_x_train.reshape(
             training_dataset[training_labels == c].shape[0], 3, training_dataset.shape[1])
-        plt.plot(c_x_train[0][0][0:100], label="class " + str(c))
+        plt.plot(c_x_train[0][2][0:100], label="class " + str(c))
     plt.legend(loc="best")
-    plt.savefig(os.path.join(output_dir, '100_x-direction_samples.png'))
+    plt.savefig(os.path.join(output_dir, '100_z-direction_samples.png'))
     plt.close()
 
     plt.figure()
@@ -157,9 +155,9 @@ if __name__ == "__main__":
         c_x_train = training_dataset[training_labels == c]
         c_x_train = c_x_train.reshape(
             training_dataset[training_labels == c].shape[0], 3, training_dataset.shape[1])
-        plt.plot(c_x_train[0][0][0:1000], label="class " + str(c))
+        plt.plot(c_x_train[0][2][0:1000], label="class " + str(c))
     plt.legend(loc="best")
-    plt.savefig(os.path.join(output_dir, '1000_x-direction_samples.png'))
+    plt.savefig(os.path.join(output_dir, '1000_z-direction_samples.png'))
     plt.close()
 
     """
@@ -206,6 +204,17 @@ if __name__ == "__main__":
         shuffle=True
     )
 
+    # history = model.fit(
+    #     train_ds,
+    #     batch_size=batch_size,
+    #     epochs=1,
+    #     callbacks=callbacks,
+    #     validation_split=0.2,
+    #     verbose=1,
+    #     shuffle=True
+    # )
+
+
     # Evaluate model on test data
     model = keras.models.load_model(os.path.join(output_dir, model_name))
     test_pred = model.predict(test_dataset)
@@ -220,6 +229,7 @@ if __name__ == "__main__":
 
     # Plot the model's test accuracy and loss
     test_loss, test_acc = model.evaluate(test_dataset, test_labels)
+    #test_loss, test_acc = model.evaluate(test_ds)
     print("Test accuracy", test_acc)
     print("Test loss", test_loss)
 
