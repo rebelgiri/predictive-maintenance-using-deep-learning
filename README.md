@@ -3,8 +3,8 @@
 
 
 
-## Description
-This repo consists of series of experiments on the time series data collected from the test setup. Each script takes different arguments. For now these scripts are not generic, as per the future requirements scripts will be modified and README is updated. For now, let's describe the usage of each script and their arguments.
+## Introduction
+In the era of Industry 4.0, sensors are installed on machinery for real-time data collection, processing, and automation. The collected data availed to build deep learning models for predictive maintenance and condition monitoring. One such sensor is the vibration sensor. They are used to detect several abnormalities in industrial machinery. In this task, a test setup is constructed, which simulates an industrial machine, and the data is collected using a vibration sensor installed upon it. Further, the collected data processed and benefited to build deep learning models and conduct investigations associated with the estimation of speed of rotors and rotating unbalance.
 
 ## Usage
 
