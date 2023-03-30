@@ -46,7 +46,6 @@ This script is used to load saved models for testing.
 
 <p align="center">
       <img src="https://github.com/rebelgiri/predictive-maintenance-using-deep-learning/blob/main/figures/trainingAndValidationLoss.png" align="left">
-      
       <img src="https://github.com/rebelgiri/predictive-maintenance-using-deep-learning/blob/main/figures/trainingAndValidationAccuracy.png" align="right">
 </p>
 
