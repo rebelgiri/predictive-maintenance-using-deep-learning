@@ -13,7 +13,20 @@ In the era of Industry 4.0, sensors are installed on machinery for real-time dat
       <em>Architecture of the model using FCN for time series classification.</em>
 </p>
 
+## **Preprocessing Time Series Data using StandardScalar**
 
+The time series data collected from the vibration sensor is 3D. Initially, the data is preprocessed using the StandardScaler method1 and fed to the model for training. The StandardScaler standardizes features by subtracting the mean and scaling to unit variance. The standard score z of a sample $x$ is calculated using equation below, where $μ$ is the mean and $s$ is the standard deviation.
+
+$z = (x - u) / s$
+
+<p align="center">
+    <img src="https://github.com/rebelgiri/predictive-maintenance-using-deep-learning/blob/main/figures/100_x-direction_samples.png" align="center">
+</p>
+
+
+<p align="center">
+      <em>Standardized time series X-direction vibration data.</em>
+</p>
 
 ## **Usage**
 
@@ -47,8 +60,8 @@ This script is used to load saved models for testing.
 ### Estimation of the Rotating Unbalance
 
 <p align="center">
-    <img src="https://github.com/rebelgiri/predictive-maintenance-using-deep-learning/tree/main/figures/trainingAndValidationLoss.png" align="center" width="49%">
-    <img src="https://github.com/rebelgiri/predictive-maintenance-using-deep-learning/tree/main/figures/trainingAndValidationAccuracy.png" align="center" width="49%">
+    <img src="https://github.com/rebelgiri/predictive-maintenance-using-deep-learning/blob/main/figures/trainingAndValidationLoss.png" align="center" width="49%">
+    <img src="https://github.com/rebelgiri/predictive-maintenance-using-deep-learning/blob/main/figures/trainingAndValidationAccuracy.png" align="center" width="49%">
 </p>
 
 
@@ -75,8 +88,8 @@ dataset using a confusion matrix.</em>
 
 
 <p align="center">
-      <img src="https://github.com/rebelgiri/predictive-maintenance-using-deep-learning/tree/main/figures/speedClassifierTrainingAndValidationLoss.png" align="center" width="30%">
-      <img src="https://github.com/rebelgiri/predictive-maintenance-using-deep-learning/tree/main/figures/speedClassifierTrainingAndValidationAccuracy.png" align="center" width="30%">
+      <img src="https://github.com/rebelgiri/predictive-maintenance-using-deep-learning/blob/main/figures/speedClassifierTrainingAndValidationLoss.png" align="center" width="30%">
+      <img src="https://github.com/rebelgiri/predictive-maintenance-using-deep-learning/blob/main/figures/speedClassifierTrainingAndValidationAccuracy.png" align="center" width="30%">
 </p>
 
 <p align="center">
