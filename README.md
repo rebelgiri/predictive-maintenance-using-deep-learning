@@ -9,7 +9,9 @@ In the era of Industry 4.0, sensors are installed on machinery for real-time dat
 ## **Architecture of the Classification Model**
 
 ![](https://github.com/rebelgiri/predictive-maintenance-using-deep-learning/blob/main/figures/FCN.png "Architecture of the model using FCN for time series classification")
-*Architecture of the model using FCN for time series classification*
+<p align="center">
+      <em>Architecture of the model using FCN for time series classification.</em>
+</p>
 
 
 
@@ -45,8 +47,8 @@ This script is used to load saved models for testing.
 ### Estimation of the Rotating Unbalance
 
 <p align="center">
-      <img src="https://github.com/rebelgiri/predictive-maintenance-using-deep-learning/blob/main/figures/trainingAndValidationLoss.png" align="left" width="50%">
-      <img src="https://github.com/rebelgiri/predictive-maintenance-using-deep-learning/blob/main/figures/trainingAndValidationAccuracy.png" align="right" width="50%">
+      <img src="https://github.com/rebelgiri/predictive-maintenance-using-deep-learning/blob/main/figures/trainingAndValidationLoss.png" align="left" width="30%">
+      <img src="https://github.com/rebelgiri/predictive-maintenance-using-deep-learning/blob/main/figures/trainingAndValidationAccuracy.png" align="right" width="30%">
 </p>
 <p align="center">
       <em>Training and validation learning curves while training Rotating Unbalance
@@ -59,9 +61,12 @@ Classifier.</em>
 
 ### Estimation of the Speed
 
-![](https://github.com/rebelgiri/predictive-maintenance-using-deep-learning/blob/main/figures/speedClassifierTrainingAndValidationLoss.png "Speed Classifier Loss during Training and Validation at each Epoch") ![](https://github.com/rebelgiri/predictive-maintenance-using-deep-learning/blob/main/figures/speedClassifierTrainingAndValidationAccuracy.png "Speed Classifier Accuracy during Training and Validation at each Epoch")
+<!-- ![](https://github.com/rebelgiri/predictive-maintenance-using-deep-learning/blob/main/figures/speedClassifierTrainingAndValidationLoss.png "Speed Classifier Loss during Training and Validation at each Epoch") ![](https://github.com/rebelgiri/predictive-maintenance-using-deep-learning/blob/main/figures/speedClassifierTrainingAndValidationAccuracy.png "Speed Classifier Accuracy during Training and Validation at each Epoch") -->
 
-
+<p align="center">
+      <img src="https://github.com/rebelgiri/predictive-maintenance-using-deep-learning/blob/main/figures/speedClassifierTrainingAndValidationLoss.png" align="left" width="30%">
+      <img src="https://github.com/rebelgiri/predictive-maintenance-using-deep-learning/blob/main/figures/speedClassifierTrainingAndValidationAccuracy.png" align="right" width="30%">
+</p>
 <p align="center">
       <em>Training and validation learning curves while training Speed
 Classifier.</em>
