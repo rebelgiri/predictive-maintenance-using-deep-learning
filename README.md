@@ -47,28 +47,60 @@ This script is used to load saved models for testing.
 ### Estimation of the Rotating Unbalance
 
 <p align="center">
-      <img src="https://github.com/rebelgiri/predictive-maintenance-using-deep-learning/blob/main/figures/trainingAndValidationLoss.png" align="left" width="30%">
-      <img src="https://github.com/rebelgiri/predictive-maintenance-using-deep-learning/blob/main/figures/trainingAndValidationAccuracy.png" align="right" width="30%">
+    <img src="https://github.com/rebelgiri/predictive-maintenance-using-deep-learning/tree/main/figures/trainingAndValidationLoss.png" align="center" width="49%">
+    <img src="https://github.com/rebelgiri/predictive-maintenance-using-deep-learning/tree/main/figures/trainingAndValidationAccuracy.png" align="center" width="49%">
 </p>
+
+
 <p align="center">
       <em>Training and validation learning curves while training Rotating Unbalance
 Classifier.</em>
 </p>
 
 
-<!-- ![](https://github.com/rebelgiri/predictive-maintenance-using-deep-learning/blob/main/figures/trainingAndValidationLoss.png "Rotating Unbalance Classifier Loss during Training and Validation at each Epoch") ![](https://github.com/rebelgiri/predictive-maintenance-using-deep-learning/blob/main/figures/trainingAndValidationAccuracy.png "Rotating Unbalance Classifier Accuracy during Training and Validation at each Epoch") -->
+<p align="center">
+    <img src="https://github.com/rebelgiri/predictive-maintenance-using-deep-learning/blob/main/figures/confusionMatrix.png" align="center" width="49%">
+</p>
+
+
+<p align="center">
+      <em>Illustration of the performance of the Rotating Unbalance Classifier on the test
+dataset using a confusion matrix.</em>
+</p>
+
 
 
 ### Estimation of the Speed
 
-<!-- ![](https://github.com/rebelgiri/predictive-maintenance-using-deep-learning/blob/main/figures/speedClassifierTrainingAndValidationLoss.png "Speed Classifier Loss during Training and Validation at each Epoch") ![](https://github.com/rebelgiri/predictive-maintenance-using-deep-learning/blob/main/figures/speedClassifierTrainingAndValidationAccuracy.png "Speed Classifier Accuracy during Training and Validation at each Epoch") -->
+
 
 <p align="center">
-      <img src="https://github.com/rebelgiri/predictive-maintenance-using-deep-learning/blob/main/figures/speedClassifierTrainingAndValidationLoss.png" align="left" width="30%">
-      <img src="https://github.com/rebelgiri/predictive-maintenance-using-deep-learning/blob/main/figures/speedClassifierTrainingAndValidationAccuracy.png" align="right" width="30%">
+      <img src="https://github.com/rebelgiri/predictive-maintenance-using-deep-learning/tree/main/figures/speedClassifierTrainingAndValidationLoss.png" align="center" width="30%">
+      <img src="https://github.com/rebelgiri/predictive-maintenance-using-deep-learning/tree/main/figures/speedClassifierTrainingAndValidationAccuracy.png" align="center" width="30%">
 </p>
+
 <p align="center">
       <em>Training and validation learning curves while training Speed
 Classifier.</em>
 </p>
 
+
+
+<p align="center">
+    <img src="https://github.com/rebelgiri/predictive-maintenance-using-deep-learning/blob/main/figures/speedClassifierConfusionMatrix.png" align="center" width="49%">
+</p>
+
+
+<p align="center">
+      <em>Illustration of the performance of the Speed Classifier on the test dataset using a
+confusion matrix.</em>
+</p>
+
+## **Conclusion**
+
+The primary goal of this task is to draft a proof-of-concept for predictive maintenance
+and condition monitoring of industrial machines using deep learning models. Therefore,
+a test setup simulating an industrial machine is constructed. Later, classification models
+are trained using the time series data collected from the vibration sensor installed upon
+it. The investigations reveal that the trained Rotating Unbalance Classifier and Speed
+Classifier are almost 100% accurate on unseen test data.
