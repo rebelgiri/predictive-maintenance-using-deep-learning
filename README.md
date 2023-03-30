@@ -44,13 +44,13 @@ This script is used to load saved models for testing.
 
 ### Estimation of the Rotating Unbalance
 
-![](figures\trainingAndValidationLoss.png "Rotating Unbalance Classifier Loss during Training and Validation at each Epoch") ![](figures\trainingAndValidationAccuracy.png "Rotating Unbalance Classifier Accuracy during Training and Validation at each Epoch")
+![](https://github.com/rebelgiri/predictive-maintenance-using-deep-learning/blob/main/figures/trainingAndValidationLoss.png "Rotating Unbalance Classifier Loss during Training and Validation at each Epoch") ![](https://github.com/rebelgiri/predictive-maintenance-using-deep-learning/blob/main/figures/trainingAndValidationAccuracy.png "Rotating Unbalance Classifier Accuracy during Training and Validation at each Epoch")
 *Training and validation learning curves while training Rotating Unbalance
 Classifier.*
 
 ### Estimation of the Speed
 
-![](figures\speedClassifierTrainingAndValidationLoss.png "Speed Classifier Loss during Training and Validation at each Epoch") ![](figures\speedClassifierTrainingAndValidationAccuracy.png "Speed Classifier Accuracy during Training and Validation at each Epoch")
+![](https://github.com/rebelgiri/predictive-maintenance-using-deep-learning/blob/main/figures/speedClassifierTrainingAndValidationLoss.png "Speed Classifier Loss during Training and Validation at each Epoch") ![](https://github.com/rebelgiri/predictive-maintenance-using-deep-learning/blob/main/figures/speedClassifierTrainingAndValidationAccuracy.png "Speed Classifier Accuracy during Training and Validation at each Epoch")
 *Training and validation learning curves while training Speed
 Classifier.*
 
