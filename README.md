@@ -8,7 +8,7 @@ In the era of Industry 4.0, sensors are installed on machinery for real-time dat
 
 ## **Architecture of the Classification Model**
 
-![](figures\FCN.png "Architecture of the model using FCN for time series classification")
+![](https://github.com/rebelgiri/predictive-maintenance-using-deep-learning/blob/main/figures/FCN.png "Architecture of the model using FCN for time series classification")
 *Architecture of the model using FCN for time series classification*
 
 
